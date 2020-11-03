@@ -15,12 +15,33 @@ const rowElements = document.querySelectorAll(".row")
 // Call this function from WITHIN your row elements loop. Then you will, in turn,
 // need to loop over the resulting cell elements. But where should this whole
 // NESTED LOOP go? Think through the user's experience: when should WHAT happen? 
-function getCellElements (currentRowElement) {
-    return currentRowElement.querySelectorAll(".cell")
+function getCellElements(currentRowElement) {
+  return currentRowElement.querySelectorAll(".cell")
+
 }
 
 
 // YOUR CODE GOES HERE
+replaceAllButton.addEventListener('click', function () {
+  let find = findInput.value
+  console.log(find)
+  let replace = replaceInput.value
+  console.log(replace)
+  const rowElements = document.querySelectorAll(".row")
+  for (let i = 0; i < rowElements.length; i++) {
+    console.log(rowElements[i])
+
+
+    let cellElements =getCellElements (rowElements[i])
+    console.log(cellElements)
+    for (let j = 0; j < cellElements.length; j++) {
+      console.log(cellElements[j])
+      
+    }
+
+  }
+})
+
 
 
 // One last thing: dedicate very careful attention to using variables and
