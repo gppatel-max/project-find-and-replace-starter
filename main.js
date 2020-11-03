@@ -32,11 +32,18 @@ replaceAllButton.addEventListener('click', function () {
     console.log(rowElements[i])
 
 
-    let cellElements =getCellElements (rowElements[i])
+    let cellElements = getCellElements(rowElements[i])
+    let match = 0
     console.log(cellElements)
     for (let j = 0; j < cellElements.length; j++) {
       console.log(cellElements[j])
-      
+       if (rowElements.includes(cellElements[j])) {
+        console.log("found")
+        match = match + 1
+      }
+      if (match === 3) {
+
+      }
     }
 
   }
