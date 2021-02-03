@@ -44,9 +44,11 @@ replaceAllButton.addEventListener('click', function () {
 if (match === 0) {
 
 }
-     
+if (cellElements[j].innerHTML.length){
+  console.log('replace')
+}
     }
-
+  
   }
 })
 
